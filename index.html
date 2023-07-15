@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>freeCodeCamp Survey Form</title>
 </head>
+
 <body>
     <main>
+
         <body>
             <h1 id="title">Atendimento ao cliente</h1>
             <p id="description">Avalie o nosso atendimento preenchendo os campos abaixo!</p>
             <form id="survey-form">
                 <fieldset>
-                    <label id="name-label">Nome <input type="text" id="name" value="nome" placeholder="Insira seu nome" required></label>
-                    <label id="email-label">Email <input type="email" id="email" value="email"  placeholder="exemplo@exemplo.com" required></label>
-                    <label id="number-label">Idade <input type="number" id="number" value="Idade" placeholder="Idade" min="13" max="120" pattern="^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$" required></label>
+                    <label id="nome-label" for="nome">Nome <input type="text" id="nome" placeholder="Insira seu nome" required></label>
+                    <label id="sobrenome-label" for="sobrenome">Sobrenome <input type="text" id="sobrenome" placeholder="Insira seu sobrenome" required></label>
+                    <label id="email-label">Email <input type="email" id="email" placeholder="exemplo@exemplo.com" required></label>
+                    <label id="number-label" for="telefone">Telefone <input type="tel" id="telefone" placeholder="(xx) xxxxx-xxxx" min="13" max="120" pattern="^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$" required></label>
                 </fieldset>
                 <fieldset>
                     <label for="dropdown">No geral, qual a nota você daria para o nosso atendimento?
@@ -29,21 +36,23 @@
                         </select>
                     </label>
                     <p>Você recomendaria os novos serviços?</p>
-                    <label><input type="radio" name="contato" value="Com certeza">Com certeza</label>
-                    <label><input type="radio" name="contato" value="Talvez">Talvez</label>
-                    <label><input type="radio" name="contato" value="Nunca">Nunca</label>
-                    <p>O que mais gostou no nosso atendimento <span>(Selecione uma ou mais opções)</span></p>
-                    <labe><input type="checkbox" value="Rapidez">Rapidez</labe>
-                    <labe><input type="checkbox" value="Atenção">Atenção</labe>
-                    <labe><input type="checkbox" value="Comprometimento">Comprometimento</labe>
-                    <labe><input type="checkbox" value="Satisfação">Satisfação</labe>
+                    <label><input type="radio" name="contato" value="Com certeza" class="inline">Com certeza</label>
+                    <label><input type="radio" name="contato" value="Talvez" class="inline">Talvez</label>
+                    <label><input type="radio" name="contato" value="Nunca" class="inline">Nunca</label>
+                    <p>O que mais gostou no nosso atendimento? <span>(Selecione uma ou mais opções)</span></p>
+                    <label><input type="checkbox" value="Rapidez" class="inline">Rapidez</label>
+                    <label><input type="checkbox" value="Atenção" class="inline">Atenção</label>
+                    <label><input type="checkbox" value="Comprometimento" class="inline">Comprometimento</label>
+                    <label><input type="checkbox" value="Satisfação" class="inline">Satisfação</label>
                 </fieldset>
                 <fieldset>
-                    <label>Tem algum comentário ou sugestão?<textarea placeholder="Insira seu comentário aqui..."></textarea></label>
+                    <label>Tem algum comentário ou sugestão?<textarea
+                            placeholder="Insira seu comentário aqui..." rows="6" cols="3"></textarea></label>
                 </fieldset>
                 <input type="submit" id="submit">
             </form>
         </body>
     </main>
 </body>
+
 </html>
